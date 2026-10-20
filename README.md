@@ -2,11 +2,12 @@
 Home lab on Proxmox. Currently running OPNsense, Domain Controller on Windows 2025 server, Splunk SIEM, and W11 endpoints
 
 # Creating the network infrastructure
-For this homelab I wanted to do my best to simulate a real work environment for Windows 11 end points. To do this I have set up an OPNsense firewall that monitors all traffic flowing between my WAN (home network) and the LAN (internal lab). From here all endpoints on the VM must connect to a domain controller setup on Windows 2025 server. The domain controller handles all user based privileges, and acts as the DNS resolver for all endpoints. All logs from OPNsense, the DC, and endpoints flow through Splunk which has been set up on an Ubuntu server to monitor all traffic flowing in this network. 
-
-Network Topology
-   -
-<img width="1092" height="802" alt="Homelab Network Topology drawio" src="https://github.com/user-attachments/assets/01297901-3830-4ff2-8d32-7d4853ca3435" />
+For this homelab I wanted to do my best to simulate a real work environment for Windows 11 end points, and what would happen to the network if it were attacked by external threat actors. This meant creating an environment with a firewall, domain controller, SIEM, and active end points.
 
 Building the Network
    -
+   Starting the build in Proxmox I needed to build the firewall, which in this case was OPNsense. The primary issue was making sure that the homelab would be able to communicate with the internet, but prevent it from reaching any other part of the home network. 
+   
+Network Topology
+   -
+<img width="1092" height="802" alt="Homelab Network Topology drawio" src="https://github.com/user-attachments/assets/01297901-3830-4ff2-8d32-7d4853ca3435" />
