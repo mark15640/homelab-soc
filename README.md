@@ -7,6 +7,7 @@ For this homelab I wanted to do my best to simulate a real work environment for 
 Building the Network
    -
    1) Starting the build in Proxmox I needed to build the firewall, which in this case was OPNsense. The primary issue was making sure that the homelab would be able to communicate with the internet, but prevent it from reaching any other part of the home network. Simulating attacks meant that I wanted to keep the lab as segmented as possible, so the firewall acted as a bridge between the WAN (home network) and the LAN (lab network). Communicating between bridge 0 (vmbr0) meant that the OPNsense firewall could communicate with the router to send and receive traffic from the internet. Communicating over bridge 1 (vmbr1) meant that the OPNsense firewall was collecting all traffic coming from inside the lab. Like any good build issues popped up immediately! I had originally planned on giving the lab network a private IP address, but that private address was already taken by certain devices on my home network, so the plan deviated into creating a new set of IP addresses for both the Native VLAN (which would host all of the servers and admin stations) and the workstation VLAN.
+
       a)  
    
 Network Topology
