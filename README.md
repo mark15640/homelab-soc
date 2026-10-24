@@ -18,5 +18,5 @@ Building the Network
       
 Network Topology
    -
-<img width="1540" height="803" alt="Homelab Network Topology drawio" src="https://github.com/user-attachments/assets/28566e50-8020-4bca-b6de-b173d085d916" />
+<img width="1540" height="802" alt="Homelab Network Topology drawio (1)" src="https://github.com/user-attachments/assets/355c4c2f-a27e-4ca3-8d33-3b9198ff843d" />
 
